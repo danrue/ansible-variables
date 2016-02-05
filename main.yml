@@ -29,7 +29,6 @@
     - local_action: "shell echo '* [{{distro}}](#{{distro}})' >> README.md"
 
     - local_action: "shell echo '{{distro}}' >> .facts.md"
-      when: ansible_lsb.description is defined
     - local_action: "shell echo '------------------------------------------------' >> .facts.md"
     - local_action: "shell echo '```json' >> .facts.md"
     - local_action: "shell echo '{{all_facts | to_json }}' | python -m json.tool >> .facts.md"
