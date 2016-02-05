@@ -1,0 +1,30 @@
+---
+- hosts: all
+  serial: 1 # Preserve ordering
+  tasks:
+    - name: Install libselinux-python on centos
+      yum:
+        name: libselinux-python
+      when: ansible_distribution == "CentOS"
+      sudo: true
+    - name: Remove private search domains from /etc/resolv.conf
+      lineinfile:
+        dest: /etc/resolv.conf
+        state: absent
+        regexp: ".*search.*"
+      sudo: true
+
+    - name: Running Ansible Setup
+      setup:
+      register: all_facts
+      sudo: true
+
+    - local_action: "shell echo '{{ansible_lsb.description}}' >> README.md"
+      when: ansible_lsb.description is defined
+    - local_action: "shell echo '{{ansible_distribution}} {{ansible_distribution_major_version}}' >> README.md"
+      when: ansible_lsb.description is undefined
+    - local_action: "shell echo '------------------------------------------------' >> README.md"
+    - local_action: "shell echo '```json' >> README.md"
+    - local_action: "shell echo '{{all_facts | to_json }}' | python -m json.tool >> README.md"
+    - local_action: "shell echo '```\n\n' >> README.md"
+
