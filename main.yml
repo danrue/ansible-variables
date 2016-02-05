@@ -20,10 +20,10 @@
       sudo: true
 
     - set_fact:
-        distro: "{{ansible_lsb.description}}"
+        distro: "{{ansible_lsb.id}}-{{ansible_lsb.major_release}}"
       when: ansible_lsb.description is defined
     - set_fact:
-        distro: "{{ansible_distribution}} {{ansible_distribution_major_version}}"
+        distro: "{{ansible_distribution}}-{{ansible_distribution_major_version}}"
       when: ansible_lsb.description is undefined
 
     - local_action: "shell echo '* [{{distro}}](#{{distro}})' >> README.md"
