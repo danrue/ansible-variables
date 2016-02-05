@@ -26,7 +26,7 @@
         distro: "{{ansible_distribution}}-{{ansible_distribution_major_version}}"
       when: ansible_lsb.description is undefined
 
-    - local_action: "shell echo '* [{{distro}}](#{{distro}})' >> README.md"
+    - local_action: "shell echo '* [{{distro}}](#{{distro|lower}})' >> README.md"
 
     - local_action: "shell echo '{{distro}}' >> .facts.md"
     - local_action: "shell echo '------------------------------------------------' >> .facts.md"
