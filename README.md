@@ -1,7 +1,13 @@
 Ansible Variables
 =================
 
+Because sometimes running setup is a pain, y'know?
 
+Open an issue or a PR against .kitchen.yml to request additional distros.
+
+* [Ubuntu 14.04.1 LTS](#Ubuntu 14.04.1 LTS)
+* [CentOS 6](#CentOS 6)
+* [CentOS 7](#CentOS 7)
 Ubuntu 14.04.1 LTS
 ------------------------------------------------
 ```json
@@ -25,16 +31,16 @@ Ubuntu 14.04.1 LTS
         "ansible_date_time": {
             "date": "2016-02-05",
             "day": "05",
-            "epoch": "1454694996",
-            "hour": "17",
-            "iso8601": "2016-02-05T17:56:36Z",
-            "iso8601_basic": "20160205T175636682751",
-            "iso8601_basic_short": "20160205T175636",
-            "iso8601_micro": "2016-02-05T17:56:36.682882Z",
-            "minute": "56",
+            "epoch": "1454696015",
+            "hour": "18",
+            "iso8601": "2016-02-05T18:13:35Z",
+            "iso8601_basic": "20160205T181335209669",
+            "iso8601_basic_short": "20160205T181335",
+            "iso8601_micro": "2016-02-05T18:13:35.209746Z",
+            "minute": "13",
             "month": "02",
-            "second": "36",
-            "time": "17:56:36",
+            "second": "35",
+            "time": "18:13:35",
             "tz": "UTC",
             "tz_offset": "+0000",
             "weekday": "Friday",
@@ -111,7 +117,7 @@ Ubuntu 14.04.1 LTS
             "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games",
             "PWD": "/home/vagrant",
             "SHELL": "/bin/bash",
-            "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-ubgepsoaodmsenztzfhideqifdbtzjth; LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 LC_MESSAGES=en_US.UTF-8 /usr/bin/python /home/vagrant/.ansible/tmp/ansible-tmp-1454694995.92-49199892455409/setup; rm -rf \"/home/vagrant/.ansible/tmp/ansible-tmp-1454694995.92-49199892455409/\" > /dev/null 2>&1",
+            "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-ufymcwcqhoqqcvheghvuvyrtfyucjkmj; LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 LC_MESSAGES=en_US.UTF-8 /usr/bin/python /home/vagrant/.ansible/tmp/ansible-tmp-1454696014.82-1914261075412/setup; rm -rf \"/home/vagrant/.ansible/tmp/ansible-tmp-1454696014.82-1914261075412/\" > /dev/null 2>&1",
             "SUDO_GID": "900",
             "SUDO_UID": "900",
             "SUDO_USER": "vagrant",
@@ -200,16 +206,16 @@ Ubuntu 14.04.1 LTS
         },
         "ansible_machine": "x86_64",
         "ansible_machine_id": "b16f99a141b8a6cc79bd65f8544670d0",
-        "ansible_memfree_mb": 57,
+        "ansible_memfree_mb": 56,
         "ansible_memory_mb": {
             "nocache": {
-                "free": 310,
-                "used": 54
+                "free": 309,
+                "used": 55
             },
             "real": {
-                "free": 57,
+                "free": 56,
                 "total": 364,
-                "used": 307
+                "used": 308
             },
             "swap": {
                 "cached": 0,
@@ -225,7 +231,7 @@ Ubuntu 14.04.1 LTS
                 "fstype": "ext4",
                 "mount": "/",
                 "options": "rw,errors=remount-ro",
-                "size_available": 37901238272,
+                "size_available": 37901205504,
                 "size_total": 41092214784,
                 "uuid": "a975dd09-15f7-4945-a2f8-f59de9af125a"
             },
@@ -265,7 +271,7 @@ Ubuntu 14.04.1 LTS
         "ansible_swaptotal_mb": 767,
         "ansible_system": "Linux",
         "ansible_system_vendor": "innotek GmbH",
-        "ansible_uptime_seconds": 1033,
+        "ansible_uptime_seconds": 2051,
         "ansible_user_dir": "/root",
         "ansible_user_gecos": "root",
         "ansible_user_gid": 0,
@@ -283,7 +289,6 @@ Ubuntu 14.04.1 LTS
 ```
 
 
-CentOS 6
 ------------------------------------------------
 ```json
 {
@@ -314,16 +319,16 @@ CentOS 6
         "ansible_date_time": {
             "date": "2016-02-05",
             "day": "05",
-            "epoch": "1454695010",
-            "hour": "17",
-            "iso8601": "2016-02-05T17:56:50Z",
-            "iso8601_basic": "20160205T175650217799",
-            "iso8601_basic_short": "20160205T175650",
-            "iso8601_micro": "2016-02-05T17:56:50.217940Z",
-            "minute": "56",
+            "epoch": "1454696018",
+            "hour": "18",
+            "iso8601": "2016-02-05T18:13:38Z",
+            "iso8601_basic": "20160205T181338673671",
+            "iso8601_basic_short": "20160205T181338",
+            "iso8601_micro": "2016-02-05T18:13:38.673770Z",
+            "minute": "13",
             "month": "02",
-            "second": "50",
-            "time": "17:56:50",
+            "second": "38",
+            "time": "18:13:38",
             "tz": "UTC",
             "tz_offset": "+0000",
             "weekday": "Friday",
@@ -397,7 +402,7 @@ CentOS 6
             "PWD": "/home/vagrant",
             "SHELL": "/bin/bash",
             "SHLVL": "1",
-            "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-gkduzfuuecxupsetzwxlwvzabxcgedbv; LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 LC_MESSAGES=en_US.UTF-8 /usr/bin/python /home/vagrant/.ansible/tmp/ansible-tmp-1454695011.03-276879338051383/setup; rm -rf \"/home/vagrant/.ansible/tmp/ansible-tmp-1454695011.03-276879338051383/\" > /dev/null 2>&1",
+            "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-wvfffwsuuaaeuflarnkybmjeqnltbkgw; LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 LC_MESSAGES=en_US.UTF-8 /usr/bin/python /home/vagrant/.ansible/tmp/ansible-tmp-1454696019.11-248582415616384/setup; rm -rf \"/home/vagrant/.ansible/tmp/ansible-tmp-1454696019.11-248582415616384/\" > /dev/null 2>&1",
             "SUDO_GID": "500",
             "SUDO_UID": "500",
             "SUDO_USER": "vagrant",
@@ -479,16 +484,16 @@ CentOS 6
             }
         },
         "ansible_machine": "x86_64",
-        "ansible_memfree_mb": 196,
+        "ansible_memfree_mb": 195,
         "ansible_memory_mb": {
             "nocache": {
-                "free": 360,
-                "used": 98
+                "free": 359,
+                "used": 99
             },
             "real": {
-                "free": 196,
+                "free": 195,
                 "total": 458,
-                "used": 262
+                "used": 263
             },
             "swap": {
                 "cached": 0,
@@ -504,7 +509,7 @@ CentOS 6
                 "fstype": "ext4",
                 "mount": "/",
                 "options": "rw",
-                "size_available": 37839044608,
+                "size_available": 37839003648,
                 "size_total": 40663146496,
                 "uuid": "67b7e847-aba5-4d31-b3c7-20c03ed3a486"
             },
@@ -548,7 +553,7 @@ CentOS 6
         "ansible_swaptotal_mb": 927,
         "ansible_system": "Linux",
         "ansible_system_vendor": "innotek GmbH",
-        "ansible_uptime_seconds": 1010,
+        "ansible_uptime_seconds": 2018,
         "ansible_user_dir": "/root",
         "ansible_user_gecos": "root",
         "ansible_user_gid": 0,
@@ -566,7 +571,6 @@ CentOS 6
 ```
 
 
-CentOS 7
 ------------------------------------------------
 ```json
 {
@@ -593,16 +597,16 @@ CentOS 7
         "ansible_date_time": {
             "date": "2016-02-05",
             "day": "05",
-            "epoch": "1454695013",
-            "hour": "17",
-            "iso8601": "2016-02-05T17:56:53Z",
-            "iso8601_basic": "20160205T175653987648",
-            "iso8601_basic_short": "20160205T175653",
-            "iso8601_micro": "2016-02-05T17:56:53.987718Z",
-            "minute": "56",
+            "epoch": "1454696021",
+            "hour": "18",
+            "iso8601": "2016-02-05T18:13:41Z",
+            "iso8601_basic": "20160205T181341902860",
+            "iso8601_basic_short": "20160205T181341",
+            "iso8601_micro": "2016-02-05T18:13:41.902923Z",
+            "minute": "13",
             "month": "02",
-            "second": "53",
-            "time": "17:56:53",
+            "second": "41",
+            "time": "18:13:41",
             "tz": "UTC",
             "tz_offset": "+0000",
             "weekday": "Friday",
@@ -696,7 +700,7 @@ CentOS 7
             "PWD": "/home/vagrant",
             "SHELL": "/bin/bash",
             "SHLVL": "1",
-            "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-axkqwgsxaohjesvdpstcwppkdcdqlhdz; LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 LC_MESSAGES=en_US.UTF-8 /usr/bin/python /home/vagrant/.ansible/tmp/ansible-tmp-1454695015.27-123991615351470/setup; rm -rf \"/home/vagrant/.ansible/tmp/ansible-tmp-1454695015.27-123991615351470/\" > /dev/null 2>&1",
+            "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-iujmxifgklshcbktjquvrsrjofrtxuvh; LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 LC_MESSAGES=en_US.UTF-8 /usr/bin/python /home/vagrant/.ansible/tmp/ansible-tmp-1454696022.71-202125887368578/setup; rm -rf \"/home/vagrant/.ansible/tmp/ansible-tmp-1454696022.71-202125887368578/\" > /dev/null 2>&1",
             "SUDO_GID": "1000",
             "SUDO_UID": "1000",
             "SUDO_USER": "vagrant",
@@ -756,16 +760,16 @@ CentOS 7
         },
         "ansible_machine": "x86_64",
         "ansible_machine_id": "a4e250fdef2b47299ba1bbf1e2f7eaba",
-        "ansible_memfree_mb": 124,
+        "ansible_memfree_mb": 123,
         "ansible_memory_mb": {
             "nocache": {
                 "free": 333,
                 "used": 124
             },
             "real": {
-                "free": 124,
+                "free": 123,
                 "total": 457,
-                "used": 333
+                "used": 334
             },
             "swap": {
                 "cached": 0,
@@ -781,7 +785,7 @@ CentOS 7
                 "fstype": "xfs",
                 "mount": "/",
                 "options": "rw,seclabel,relatime,attr2,inode64,noquota",
-                "size_available": 40368025600,
+                "size_available": 40367874048,
                 "size_total": 41281146880,
                 "uuid": "4e299991-aa09-4378-881f-adf5a016df5d"
             },
@@ -826,7 +830,7 @@ CentOS 7
         "ansible_swaptotal_mb": 1023,
         "ansible_system": "Linux",
         "ansible_system_vendor": "innotek GmbH",
-        "ansible_uptime_seconds": 963,
+        "ansible_uptime_seconds": 1971,
         "ansible_user_dir": "/root",
         "ansible_user_gecos": "root",
         "ansible_user_gid": 0,

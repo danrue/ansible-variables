@@ -19,12 +19,19 @@
       register: all_facts
       sudo: true
 
-    - local_action: "shell echo '{{ansible_lsb.description}}' >> README.md"
+    - set_fact:
+        distro: "{{ansible_lsb.description}}"
       when: ansible_lsb.description is defined
-    - local_action: "shell echo '{{ansible_distribution}} {{ansible_distribution_major_version}}' >> README.md"
+    - set_fact:
+        distro: "{{ansible_distribution}} {{ansible_distribution_major_version}}"
       when: ansible_lsb.description is undefined
-    - local_action: "shell echo '------------------------------------------------' >> README.md"
-    - local_action: "shell echo '```json' >> README.md"
-    - local_action: "shell echo '{{all_facts | to_json }}' | python -m json.tool >> README.md"
-    - local_action: "shell echo '```\n\n' >> README.md"
+
+    - local_action: "shell echo '* [{{distro}}](#{{distro}})' >> README.md"
+
+    - local_action: "shell echo '{{distro}}' >> .facts.md"
+      when: ansible_lsb.description is defined
+    - local_action: "shell echo '------------------------------------------------' >> .facts.md"
+    - local_action: "shell echo '```json' >> .facts.md"
+    - local_action: "shell echo '{{all_facts | to_json }}' | python -m json.tool >> .facts.md"
+    - local_action: "shell echo '```\n\n' >> .facts.md"
 
